@@ -9,14 +9,14 @@ function formatDollarAmount(float $amount): string
     return ($isNegative ? '-' : '') . '$' . number_format(abs($amount), 2);
 }
 
-function formatDate($date): string
+function formatDate(string $date): string
 {
     return date('M j, Y', strtotime($date));
 }
 
-function prettyPrint(array $data): void
+function prettyPrint(array $array): void
 {
     echo '<pre>';
-    print_r($data);
+    print_r($array);
     echo '</pre>';
 }
